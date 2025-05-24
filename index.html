@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cardápio | Zana Doces & Cia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <img src="img/logo.png" class="logo-animada" alt="Logo da loja">
+    <p>Delícias feitas com carinho! Doces, salgados e encomendas especiais para tornar seus momentos ainda mais saborosos.</p>
+    <p>Delivery via iFood. Produto indisponível? Encomende pelo WhatsApp no site.</p>
+    <a href="https://www.ifood.com.br/delivery/mogi-das-cruzes-sp/zana-doces-centro/85cf08d5-e398-44fc-929d-718d5de85b3d" target="_blank" class="btn-ifood">🍽️ Peça pelo iFood</a>
+    <a href="https://www.instagram.com/zanadocesmogi" target="_blank" class="btn-header instagram">📸 Instagram</a>
+  </header>
+
+  <main class="produtos">
+    <!-- Cards de produtos -->
+    <div class="card">
+      <div class="imagem-zoom"><img src="img/MOUSSEMARACUJA.png" alt="Mousse de Maracujá"></div>
+      <h2>Mousse de Maracujá</h2><p>Serve 1 pessoa</p>
+      <input type="number" min="1" value="1" class="quantidade">
+      <button onclick="enviarPedido('Mousse de Maracujá', this)">Encomendar</button>
+    </div>
+
+    <div class="card">
+      <div class="imagem-zoom"><img src="img/PUDIM.png" alt="Pudim (P)"></div>
+      <h2>Pudim (P)</h2><p>Serve até 2 pessoas</p>
+      <input type="number" min="1" value="1" class="quantidade">
+      <button onclick="enviarPedido('Pudim Pequeno', this)">Encomendar</button>
+    </div>
+
+    <div class="card">
+      <div class="imagem-zoom"><img src="img/CHEESEESK.png" alt="Cheesecake de Morango"></div>
+      <h2>Cheesecake de Morango</h2><p>Serve 1 pessoa</p>
+      <input type="number" min="1" value="1" class="quantidade">
+      <button onclick="enviarPedido('Cheesecake de Morango', this)">Encomendar</button>
+    </div>
+
+    <div class="card">
+      <div class="imagem-zoom"><img src="img/GELADODEABACAXI.png" alt="Gelado de Abacaxi"></div>
+      <h2>Gelado de Abacaxi</h2><p>Serve 1 pessoa</p>
+      <input type="number" min="1" value="1" class="quantidade">
+      <button onclick="enviarPedido('Gelado de Abacaxi', this)">Encomendar</button>
+    </div>
+
+    <div class="card">
+      <div class="imagem-zoom"><img src="img/PAODEMELCHOCO.png" alt="Pão de Mel Chocolate"></div>
+      <h2>Pão de Mel Chocolate</h2><p>1 Unidade</p>
+      <input type="number" min="1" value="1" class="quantidade">
+      <button onclick="enviarPedido('Pão de Mel Chocolate', this)">Encomendar</button>
+    </div>
+
+    <div class="card">
+      <div class="imagem-zoom"><img src="img/PAODEMELDOCELEITE.png" alt="Pão de Mel Doce de Leite"></div>
+      <h2>Pão de Mel Doce de Leite</h2><p>1 Unidade</p>
+      <input type="number" min="1" value="1" class="quantidade">
+      <button onclick="enviarPedido('Pão de Mel Doce de Leite', this)">Encomendar</button>
+    </div>
+
+    <div class="card">
+      <div class="imagem-zoom"><img src="img/PAODEMELPRESTIGIO.png" alt="Pão de Mel Prestígio"></div>
+      <h2>Pão de Mel Prestígio</h2><p>1 Unidade</p>
+      <input type="number" min="1" value="1" class="quantidade">
+      <button onclick="enviarPedido('Pão de Mel Prestígio', this)">Encomendar</button>
+    </div>
+
+    <div class="card">
+      <div class="imagem-zoom"><img src="img/abobora.png" alt="Doce de Abóbora"></div>
+      <h2>Doce de Abóbora</h2><p>Serve 1 pessoa</p>
+      <input type="number" min="1" value="1" class="quantidade">
+      <button onclick="enviarPedido('Doce de Abóbora', this)">Encomendar</button>
+    </div>
+
+    <div class="card">
+      <div class="imagem-zoom"><img src="img/TORTAHOLANDESA.png" alt="Torta Holandesa"></div>
+      <h2>Torta Holandesa</h2><p>Serve até 8 pessoas</p>
+      <input type="number" min="1" value="1" class="quantidade">
+      <button onclick="enviarPedido('Torta Holandesa Família', this)">Encomendar</button>
+    </div>
+
+    <div class="card">
+      <div class="imagem-zoom"><img src="img/TORTALIMAO.png" alt="Torta de Limão"></div>
+      <h2>Torta de Limão</h2><p>Serve até 8 pessoas</p>
+      <input type="number" min="1" value="1" class="quantidade">
+      <button onclick="enviarPedido('Torta de Limão Família', this)">Encomendar</button>
+    </div>
+
+    <div class="card">
+      <div class="imagem-zoom"><img src="img/PUDIMFAMILIA.png" alt="Pudim Família"></div>
+      <h2>Pudim (F)</h2><p>Serve até 8 pessoas</p>
+      <input type="number" min="1" value="1" class="quantidade">
+      <button onclick="enviarPedido('Pudim Família', this)">Encomendar</button>
+    </div>
+
+    <div class="card">
+      <div class="imagem-zoom"><img src="img/ARROZDOCE.png" alt="Arroz Doce"></div>
+      <h2>Arroz Doce</h2><p>Serve 1 pessoa</p>
+      <input type="number" min="1" value="1" class="quantidade">
+      <button onclick="enviarPedido('Arroz Doce', this)">Encomendar</button>
+    </div>
+
+    <div class="card">
+      <div class="imagem-zoom"><img src="img/tortalimaopequena.png" alt="Tortinha de Limão"></div>
+      <h2>Tortinha de Limão</h2><p>Serve 1 pessoa</p>
+      <input type="number" min="1" value="1" class="quantidade">
+      <button onclick="enviarPedido('Tortinha de Limão', this)">Encomendar</button>
+    </div>
+
+    <div class="card">
+      <div class="imagem-zoom"><img src="img/TORTINHAHOLANDESA.png" alt="Tortinha Holandesa"></div>
+      <h2>Tortinha Holandesa</h2><p>Serve 1 pessoa</p>
+      <input type="number" min="1" value="1" class="quantidade">
+      <button onclick="enviarPedido('Tortinha Holandesa', this)">Encomendar</button>
+    </div>
+
+    <div class="card">
+      <div class="imagem-zoom"><img src="img/TORTADEMORANGO.png" alt="Tortinha de Morango"></div>
+      <h2>Tortinha de Morango</h2><p>Serve 1 pessoa</p>
+      <input type="number" min="1" value="1" class="quantidade">
+      <button onclick="enviarPedido('Tortinha de Morango', this)">Encomendar</button>
+    </div>
+
+    <div class="card">
+      <div class="imagem-zoom"><img src="img/Torta de frango.png" alt="Torta de Frango"></div>
+      <h2>Torta de Frango</h2><p>Serve até 2 pessoas</p>
+      <input type="number" min="1" value="1" class="quantidade">
+      <button onclick="enviarPedido('Torta de Frango', this)">Encomendar</button>
+    </div>
+
+    <!-- Camafeus de Nozes - únicos -->
+    <div class="card">
+      <div class="imagem-zoom"><img src="img/Camafêu de Nozes.jpeg" alt="Camafêu de Nozes (G)"></div>
+      <h2>Camafêu de Nozes (G)</h2><p>Contém 6 unidades</p>
+      <input type="number" min="1" value="1" class="quantidade">
+      <button onclick="enviarPedido('Camafêu de Nozes - 6 unidades', this)">Encomendar</button>
+    </div>
+
+    <div class="card">
+      <div class="imagem-zoom"><img src="img/CamafêudeNozes.jpeg" alt="Camafêu de Nozes (P)"></div>
+      <h2>Camafêu de Nozes (P)</h2><p>Contém 4 unidades</p>
+      <input type="number" min="1" value="1" class="quantidade">
+      <button onclick="enviarPedido('Camafêu de Nozes - 4 unidades', this)">Encomendar</button>
+    </div>
+
+    <div class="card">
+      <div class="imagem-zoom"><img src="img/BARRACHOCOLATE.jpg" alt="Barra branca recheio brigadeiro"></div>
+      <h2>Barra branca recheio brigadeiro</h2><p>1 Unidade</p>
+      <input type="number" min="1" value="1" class="quantidade">
+      <button onclick="enviarPedido('Barra branca recheio brigadeiro', this)">Encomendar</button>
+    </div>
+
+    <div class="card">
+      <div class="imagem-zoom"><img src="img/BARRAMARACUJA.jpg" alt="Barra Chocolate recheio maracuja"></div>
+      <h2>Barra Chocolate recheio maracuja</h2><p>1 Unidade</p>
+      <input type="number" min="1" value="1" class="quantidade">
+      <button onclick="enviarPedido('Barra Chocolate recheio maracuja', this)">Encomendar</button>
+    </div>
+
+    <div class="card">
+      <div class="imagem-zoom"><img src="img/BRIGADEIRO.jpg" alt="Brigadeiro"></div>
+      <h2>Brigadeiro</h2><p>1 Unidade</p>
+      <input type="number" min="1" value="1" class="quantidade">
+      <button onclick="enviarPedido('Brigadeiro', this)">Encomendar</button>
+    </div>
+
+    <div class="card">
+      <div class="imagem-zoom"><img src="img/NINHO.jpg" alt="Brigadeiro Ninho"></div>
+      <h2>Brigadeiro Ninho</h2><p>1 Unidade</p>
+      <input type="number" min="1" value="1" class="quantidade">
+      <button onclick="enviarPedido('Brigadeiro Ninho', this)">Encomendar</button>
+    </div>
+    <div class="card">
+      <div class="imagem-zoom"><img src="img/CAFE.jpg" alt="Brigadeiro de Café"></div>
+      <h2>Brigadeiro de Café</h2><p>1 Unidade</p>
+      <input type="number" min="1" value="1" class="quantidade">
+      <button onclick="enviarPedido('Brigadeiro de Café', this)">Encomendar</button>
+    </div>
+
+    <div class="card">
+      <div class="imagem-zoom"><img src="img/TORTALIMAO2.jpeg" alt="Torta de Limão"></div>
+      <h2>Torta de Limão</h2><p>Serve até 8 pessoas</p>
+      <input type="number" min="1" value="1" class="quantidade">
+      <button onclick="enviarPedido('Torta de Limão (F)', this)">Encomendar</button>
+    </div>
+
+    <div class="card">
+      <div class="imagem-zoom"><img src="img/TORTAMORANGO.jpeg" alt="Torta de Morango"></div>
+      <h2>Torta de Morango</h2><p>Serve até 8 pessoas</p>
+      <input type="number" min="1" value="1" class="quantidade">
+      <button onclick="enviarPedido('Torta de Morango (F)', this)">Encomendar</button>
+    </div>
+    <div class="card">
+      <div class="imagem-zoom"><img src="img/MOUSSELIMAO.jpg" alt="Mousse de Limão"></div>
+      <h2>Mousse de Limão</h2><p>Serve 1 pessoa</p>
+      <input type="number" min="1" value="1" class="quantidade">
+      <button onclick="enviarPedido('Mousse de Limão', this)">Encomendar</button>
+    </div>
+
+    <div class="card">
+      <div class="imagem-zoom"><img src="img/TORTINHAABACAXI.jpeg" alt="Tortinha de Abacaxi"></div>
+      <h2>Tortinha de Abacaxi</h2><p>Serve 1 pessoa</p>
+      <input type="number" min="1" value="1" class="quantidade">
+      <button onclick="enviarPedido('Tortinha de Abacaxi', this)">Encomendar</button>
+    </div>
+
+    <div class="card">
+      <div class="imagem-zoom"><img src="img/CHOCOTONE.jpg" alt="Chocotone"></div>
+      <h2>Chocotone</h2><p>Serve até 8 pessoas</p>
+      <input type="number" min="1" value="1" class="quantidade">
+      <button onclick="enviarPedido('Chocotone', this)">Encomendar</button>
+    </div>
+
+    <div class="card">
+      <div class="imagem-zoom"><img src="img/Trufas.jpg" alt="Trufas"></div>
+      <h2>Trufas</h2><p>1 Unidade</p>
+      <input type="number" min="1" value="1" class="quantidade">
+      <button onclick="enviarPedido('Trufas', this)">Encomendar</button>
+    </div>
+
+    <div class="card">
+      <div class="imagem-zoom"><img src="img/CANUDPRESTIGIO.jpg" alt="Canudinho de Coco"></div>
+      <h2>Canudinho de Coco</h2><p>1 Unidade</p>
+      <input type="number" min="1" value="1" class="quantidade">
+      <button onclick="enviarPedido('Canudinho de Coco', this)">Encomendar</button>
+    </div>
+    
+  </main>
+
+<footer style="text-align: center; padding: 20px; background-color: #f8f8f8; font-size: 14px; color: #555;">
+  © 2024 Zana Doces & Cia. Todos os direitos reservados.
+</footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

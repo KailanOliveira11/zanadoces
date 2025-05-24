@@ -1,0 +1,247 @@
+/* Seu CSS original permanece igual */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f8f8fa;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  background-color: #ff7eb3;
+  color: white;
+  padding: 2rem 1rem;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 16px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.card h2 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.3rem;
+}
+
+.card p {
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.card input {
+  width: 60px;
+  padding: 0.4rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.card button {
+  background: rgb(255, 126, 180);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.card button:hover {
+  background: rgb(223, 59, 116);
+}
+
+.imagem-zoom {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.imagem-zoom img {
+  transition: transform 0.4s ease;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.imagem-zoom:hover img {
+  transform: scale(1.1);
+}
+
+.botoes-header {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-header {
+  padding: 0.6rem 1.4rem;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  transition: background 0.3s ease;
+  display: inline-block;
+}
+
+.btn-ifood {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: rgb(255, 126, 180);
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn-ifood:hover {
+  background-color: #c91522;
+}
+
+.btn-header.instagram {
+  background-color: rgb(255, 126, 180);
+}
+
+.btn-header.instagram:hover {
+  background: linear-gradient(45deg, #feda75, #d62976, #962fbf);
+  filter: brightness(0.9);
+}
+
+.logo-animada {
+  animation: aparecer 2s ease-in-out forwards;
+  opacity: 0;
+  max-width: 300px;
+  margin: 0 auto;
+  transition: transform 0.3s ease; /* Adiciona transição para o hover */
+}
+
+.logo-animada:hover {
+  transform: scale(1.1); /* Zoom no hover */
+}
+
+.logo-animada img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@keyframes aparecer {
+  to {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+
+/* Media queries para dispositivos móveis e tablets */
+
+/* Smartphones Android e iPhone - até 480px */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .produtos {
+    grid-template-columns: 1fr;
+    padding: 10px;
+    gap: 15px;
+  }
+
+  .card {
+    padding: 12px;
+  }
+
+  .card h2 {
+    font-size: 1.1rem;
+  }
+
+  .card input {
+    width: 50px;
+    padding: 0.3rem;
+  }
+
+  .btn-header,
+  .btn-ifood {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablets retrato (portrait) - entre 481px e 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .produtos {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 15px;
+    gap: 18px;
+  }
+
+  .card h2 {
+    font-size: 1.2rem;
+  }
+
+  .btn-header,
+  .btn-ifood {
+    padding: 0.55rem 1.1rem;
+    font-size: 1rem;
+  }
+}
+
+/* Tablets em paisagem e iPads - entre 769px e 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  .produtos {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .card h2 {
+    font-size: 1.25rem;
+  }
+
+  .btn-header,
+  .btn-ifood {
+    padding: 0.6rem 1.2rem;
+    font-size: 1.05rem;
+  }
+}
