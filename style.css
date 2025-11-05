@@ -84,6 +84,20 @@ header h1 {
 .imagem-zoom {
   overflow: hidden;
   border-radius: 8px;
+  position: relative;
+}
+
+.imagem-zoom::before {
+  content: 'Zana Doces & Cia';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.5rem;
+  font-weight: bold;
+  pointer-events: none;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 .imagem-zoom img {
@@ -93,9 +107,15 @@ header h1 {
   display: block;
 }
 
-.imagem-zoom:hover img {
-  transform: scale(1.1);
+.imagem-protegida-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('img/transparent.gif');
 }
+
 
 .botoes-header {
   margin-top: 1rem;
@@ -146,6 +166,7 @@ header h1 {
   max-width: 300px;
   margin: 0 auto;
   transition: transform 0.3s ease; /* Adiciona transição para o hover */
+  filter: drop-shadow(0 0 5px white);
 }
 
 .logo-animada:hover {
@@ -198,6 +219,10 @@ header h1 {
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
   }
+  .secao-titulo {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+  }
 }
 
 /* Tablets retrato (portrait) - entre 481px e 768px */
@@ -220,6 +245,10 @@ header h1 {
   .btn-ifood {
     padding: 0.55rem 1.1rem;
     font-size: 1rem;
+  }
+  .secao-titulo {
+    font-size: 1.7rem;
+    margin: 2.5rem 0 1.2rem;
   }
 }
 
@@ -244,4 +273,12 @@ header h1 {
     padding: 0.6rem 1.2rem;
     font-size: 1.05rem;
   }
+  .secao-titulo {
+    font-size: 1.8rem;
+    margin: 2.8rem 0 1.3rem;
+  }
+}
+
+.secao-titulo {
+  text-align: center;
 }

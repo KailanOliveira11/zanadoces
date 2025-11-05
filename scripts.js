@@ -16,3 +16,8 @@ function enviarPedido(produto, btn) {
   window.open(url, '_blank');
 }
 
+document.addEventListener('contextmenu', function(e) {
+  if (e.target.nodeName === 'IMG') {
+    e.preventDefault();
+  }
+});
